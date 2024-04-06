@@ -29,7 +29,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 24px;
+            font-size: 55px;
             cursor: pointer;
             color: red; /* Red color for X and O */
         }
@@ -72,8 +72,13 @@
         board[row][col] = currentPlayer;
         const cell = document.querySelector('.board').children[row * 3 + col];
         if (cell instanceof HTMLElement) {
-            cell.textContent = currentPlayer;
-        }
+                    cell.textContent = currentPlayer;
+                    if (currentPlayer === 'X') {
+                        cell.style.color = 'red'; // Set color to red for X
+                    } else {
+                        cell.style.color = 'purple'; // Set color to purple for O
+                    }
+                }
         if (checkWin()) {
             setTimeout(function() {
                 alert(currentPlayer + " wins!");
