@@ -82,12 +82,12 @@
         if (checkWin()) {
             setTimeout(function() {
                 alert(currentPlayer + " wins!");
-                resetBoard();
+                
             }, 20); // Delay of 0.5 seconds (500 milliseconds)
         } else if (checkDraw()) {
             setTimeout(function() {
                 alert("It's a draw!");
-            resetBoard();
+            
             }, 20);
         } else {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
